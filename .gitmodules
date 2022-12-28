@@ -1,0 +1,3 @@
+[submodule "GymNotebookAngular"]
+	path = GymNotebookAngular
+	url = https://github.com/JaredMAdams/GymNotebook.git
