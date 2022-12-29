@@ -36,6 +36,10 @@ public class WorkoutMuscleGroupService {
         return this.workoutMuscleGroupRepo.save(workoutMuscleGroup);
     }
 
+    public List<WorkoutMuscleGroup> createMultipleWorkoutMuscleGroups(List<WorkoutMuscleGroup> workoutMuscleGroup) {
+        return this.workoutMuscleGroupRepo.saveAll(workoutMuscleGroup);
+    }
+
     public void deleteWorkoutMuscleGroup(Integer workoutMuscleGroupId) {
         this.workoutMuscleGroupRepo.deleteById(workoutMuscleGroupId);
     }

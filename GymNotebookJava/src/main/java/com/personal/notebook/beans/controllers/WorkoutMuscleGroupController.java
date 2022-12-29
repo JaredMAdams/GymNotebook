@@ -38,8 +38,6 @@ public class WorkoutMuscleGroupController {
         return ResponseEntity.ok(this.workoutMuscleGroupService.readAll());
     }
 
-
-
     @GetMapping(value = "/workout/{workoutId}")
     public ResponseEntity<List<WorkoutMuscleGroup>> getByWorkoutId(@PathVariable Integer workoutId) {
         return ResponseEntity.ok(this.workoutMuscleGroupService.readByWorkoutId(workoutId));
@@ -48,6 +46,11 @@ public class WorkoutMuscleGroupController {
     @PostMapping
     public ResponseEntity<WorkoutMuscleGroup> createWorkoutMuscleGroup(@RequestBody WorkoutMuscleGroup workoutMuscleGroup) {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.workoutMuscleGroupService.createWorkoutMuscleGroup(workoutMuscleGroup));
+    }
+
+    @PostMapping(value = "/multiple")
+    public ResponseEntity<List<WorkoutMuscleGroup>> createMultipleWorkoutMuscleGroups(@RequestBody List<WorkoutMuscleGroup> workoutMuscleGroup) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(this.workoutMuscleGroupService.createMultipleWorkoutMuscleGroups(workoutMuscleGroup));
     }
 
     @PostMapping(value = "/muscle-group")
