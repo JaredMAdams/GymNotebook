@@ -6,9 +6,9 @@ export interface WorkoutExercise {
     exercise: {
         exerciseId: number
     };
-    avgSpeed?: number;
-    calories?: number;
-    time?: number;
-    distance?: number;
-    notes?: string;
+    avgSpeed: number;
+    calories: number;
+    time: number;
+    distance: number;
+    notes: string;
 }

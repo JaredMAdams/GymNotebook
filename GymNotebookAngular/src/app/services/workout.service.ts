@@ -34,6 +34,13 @@ export class WorkoutService {
     )
   }
 
+  getWorkoutsByUserId(userId: number): Observable<Workout[]> {
+    return this.http.get<Workout[]>(`${this.workoutUrl}/user/` + userId, {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
   postWorkout(workout: Workout): Observable<Workout> {
     return this.http.post<Workout>(`${this.workoutUrl}`, JSON.stringify(workout), {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
       retry(1),

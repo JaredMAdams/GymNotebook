@@ -1,0 +1,75 @@
+.main {
+    height: calc(100% - 48px);
+    width: 100%;
+    position: absolute;
+    display: block;
+}
+
+#header {
+    height: 20%;
+    text-align: center;
+    display: block;
+    top: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+
+    border-bottom: black solid 1px;
+    font-weight: bold;
+}
+
+#new {
+    right: 0%;
+    position: absolute;
+    display: inline-block;
+    top: 7%;
+}
+
+/* #title {
+    text-align: center;
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    top: 0%;
+    border-bottom: black solid 1px;
+
+} */
+
+#display {
+    width: 100%;
+    height: calc(100% - 82px);
+    
+}
+
+#footer {
+    bottom: 0%;
+    width: 100%;
+    position: absolute;
+    border: black solid 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    height: 30px;
+}
+
+#footer_display {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+}
+
+#number {
+    font-size: larger;
+}
+
+#previous {
+    position: absolute;
+    left: 0%;
+    top: -35%;
+}
+
+#next {
+    position: absolute;
+    right: 0%;
+    top: -35%;
+}

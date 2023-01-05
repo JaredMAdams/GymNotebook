@@ -1,0 +1,14 @@
+<div class="main">
+
+    <nav mat-tab-nav-bar  [tabPanel]="tabPanel" id="navbar">
+        <a mat-tab-link id="link" *ngFor="let link of links"
+           (click)="activeLink = link; navigate()"
+           [active]="activeLink == link"> 
+           <mat-icon *ngIf="link == '/main/home'">home</mat-icon> 
+           <mat-icon *ngIf="link == '/main/workout'">density_small</mat-icon> 
+           <mat-icon *ngIf="link == '/main/exercises'">list</mat-icon> 
+           <mat-icon *ngIf="link == '/main/account'">account_circle</mat-icon> 
+        </a>
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</div>

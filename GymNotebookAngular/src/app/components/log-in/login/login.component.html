@@ -1,0 +1,43 @@
+<div class="login">
+    <!-- Upper coloring and photo for background of login page -->
+    <div class="background">
+        <img id="logo" src="https://lh3.googleusercontent.com/owfyYEGh7LKc0Ay-1K7nPjJjmMCdtLYZXK79guZA7uXb_jGqdj1N5yMghAV16VYRicCqbW23M8e8EyC5EP8tmMXsCIKkP6meSJQdWcJJJwWHAg1Q_IhXEMxkoggpgGmJ8VR2EEUlnA=w2400" alt="Logo" referrerpolicy="no-referrer">
+    </div>
+
+    <!-- Username and Password box -->
+    <div class="bottom">
+
+        <div class="credentials">
+
+            <mat-form-field id="username">
+
+                <mat-label>Username or Email</mat-label>
+                <input matInput [(ngModel)]="credentials.credentials">
+                
+            </mat-form-field>
+
+            <mat-form-field id="password" (keydown.enter)="login()">
+
+                <mat-label>Password</mat-label>
+                <input matInput id="password_input" type="password" [(ngModel)]="credentials.password">
+
+                <button mat-icon-button matSuffix *ngIf="visible == false" (click)="show()">
+                    <mat-icon>visibility</mat-icon>
+                </button>
+
+                <button mat-icon-button matSuffix *ngIf="visible == true" (click)="show()">
+                    <mat-icon>visibility_off</mat-icon>
+                </button>
+
+            </mat-form-field>
+
+            <strong id="error" *ngIf="emailPasswordError == true">Incorrect Username/Email or Password</strong>
+
+            <br>
+
+            <button id="submit" type="submit" mat-raised-button (click)="login()" (keydown.enter)="login()">Login</button>
+
+        </div>
+
+    </div>
+</div>

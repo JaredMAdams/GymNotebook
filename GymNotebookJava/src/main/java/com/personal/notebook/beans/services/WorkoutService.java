@@ -32,6 +32,10 @@ public class WorkoutService {
         return this.workoutRepo.findByTitle(title);
     }
 
+    public List<Workout> readByUserId(Integer userId) {
+        return this.workoutRepo.findByWorkoutByUser(userId);
+    }
+
     public Workout createWorkout(Workout workout) {
         return this.workoutRepo.save(workout);
     }

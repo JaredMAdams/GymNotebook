@@ -38,6 +38,10 @@ public class WorkoutExerciseService {
         return this.workoutExerciseRepo.save(workoutExercise);
     }
 
+    public List<WorkoutExercise> createMultipleWorkoutExercises(List<WorkoutExercise> workoutExercises) {
+        return this.workoutExerciseRepo.saveAll(workoutExercises);
+    }
+
     public void deleteWorkoutExercise(Integer workoutExerciseId) {
         this.workoutExerciseRepo.deleteById(workoutExerciseId);
     }

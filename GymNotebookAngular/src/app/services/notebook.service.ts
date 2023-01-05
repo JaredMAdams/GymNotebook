@@ -27,8 +27,8 @@ export class NotebookService {
     )
   }
 
-  getNotebookByUser(userId: number): Observable<Notebook[]> {
-    return this.http.get<Notebook[]>(`${this.notebookUrl}/user/` + userId, {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
+  getNotebookByUser(userId: number): Observable<Notebook> {
+    return this.http.get<Notebook>(`${this.notebookUrl}/user/` + userId, {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
       retry(1),
       catchError(this.errorHandl)
     )

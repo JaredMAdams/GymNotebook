@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,6 +45,11 @@ public class WorkoutController {
     @GetMapping(value = "/title/{title}")
     public ResponseEntity<List<Workout>> getByTitle(@PathVariable String title) {
         return ResponseEntity.ok(this.workoutService.readByTitle(title));
+    }
+
+    @GetMapping(value = "/user/{userId}")
+    public ResponseEntity<List<Workout>> getByUserId(@PathVariable Integer userId) {
+        return ResponseEntity.ok(this.workoutService.readByUserId(userId));
     }
 
     @PostMapping

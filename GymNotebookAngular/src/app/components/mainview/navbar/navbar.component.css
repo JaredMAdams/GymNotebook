@@ -1,0 +1,11 @@
+.main {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+}
+
+#link {
+    border: black solid 1px;
+    background-color: #1db3e0;
+}

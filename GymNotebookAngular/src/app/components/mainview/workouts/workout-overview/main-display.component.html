@@ -1,0 +1,50 @@
+<div class="main">
+
+    <div id="top_of_page">
+
+        <mat-card class="card">
+
+            <mat-card-header id="header">
+                Today's Workout
+                <button mat-icon-button id="new" (click)="newWorkout()">
+                    <mat-icon>add_circle</mat-icon>
+                </button>
+            </mat-card-header>
+
+            <!-- <ng-container *ngIf="_workouts.title != ''">
+                <mat-card-header id="title">
+                    {{_workouts.title}}
+                </mat-card-header>
+            </ng-container> -->
+           
+        </mat-card>
+    </div>    
+
+    <div id="display">
+
+        <app-workout-display [pageNumber]="this.pageNumber" [workouts]="this._workouts"></app-workout-display>
+
+    </div>
+
+    <mat-card id="footer" >
+
+        <ng-container >
+
+            <mat-card-footer id="footer_display">
+
+                <button mat-icon-button id="previous" *ngIf="this.pageNumberLoaded && this.pageNumber > 1" (click)="previous()">
+                    <mat-icon>chevron_left</mat-icon>
+                </button>
+
+               <span id="number" *ngIf="this.pageNumberLoaded">{{this.pageNumber}}</span>
+
+               <button mat-icon-button id="next" *ngIf="this.pageNumberLoaded && this.pageNumber < this._workouts.length" (click)="next()">
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+
+            </mat-card-footer>
+        </ng-container>
+
+    </mat-card>
+
+</div>

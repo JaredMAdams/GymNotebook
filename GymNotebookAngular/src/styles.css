@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}

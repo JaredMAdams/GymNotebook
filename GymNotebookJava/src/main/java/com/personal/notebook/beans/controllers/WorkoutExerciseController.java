@@ -47,10 +47,17 @@ public class WorkoutExerciseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.workoutExerciseService.createWorkoutExercise(workoutExercise));
     }
 
+    @PostMapping(value = "/multiple")
+    public ResponseEntity<List<WorkoutExercise>> createMultipleWorkoutExercise(@RequestBody List<WorkoutExercise> workoutExercises) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(this.workoutExerciseService.createMultipleWorkoutExercises(workoutExercises));
+    }
+
     @PostMapping(value = "/user-exercise")
     public ResponseEntity<List<WorkoutExercise>> getByUserExercise(@RequestBody UserExercise userExercise) {
         return ResponseEntity.ok(this.workoutExerciseService.readByUserExercise(userExercise.getExerciseId(), userExercise.getUserId()));
     }
+
+
 
     @PutMapping
     public ResponseEntity<WorkoutExercise> updateWorkoutExercise(@RequestBody WorkoutExercise workoutExercise) {

@@ -1,0 +1,35 @@
+<div class="main">
+
+    <div class="top_line">
+        
+        <mat-card>
+
+            <mat-card-header id="header">
+                Create New Workout
+                <button mat-icon-button id="new" (click)="onClose()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-card-header>
+
+        </mat-card>
+
+    </div>
+
+    <div id="bottom">
+
+            <mat-form-field id="title">
+
+                <mat-label>Workout Title</mat-label>
+                <input matInput [(ngModel)]="newWorkout.title" autocomplete="off" auto placeholder="Ex: Chest/Triceps" (keydown.enter)="onSubmit()">
+
+                <button mat-icon-button matSuffix aria-label="Clear" *ngIf="newWorkout.title" (click)="titleClear()" >
+                    <mat-icon>close_circle</mat-icon>
+                </button>
+
+            </mat-form-field>
+
+            <button id="submit" mat-button (click)="onSubmit()" (keydown.enter)="onSubmit()">Submit</button>
+
+    </div>
+
+</div>
