@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Workout } from 'src/app/interfaces/workout';
-import { Set } from 'src/app/interfaces/set';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NewWorkoutComponent } from '../new-workout/new-workout/new-workout.component';
 import { WorkoutService } from 'src/app/services/workout.service';
@@ -18,18 +17,8 @@ export class MainDisplayComponent {
     title: '',
     page: {
       pageId: 0
-    }
-  }]
-
-  newSet: Set[] = [{
-    weightGoal: 0,
-    repGoal: 0,
-    weightActual: 0,
-    repActual: 0,
-    set: 0,
-    workoutExercise: {
-      workoutExerciseId: 0
-    }
+    },
+    createDateTime: ''
   }]
 
   pageNumber: number = 0
@@ -68,5 +57,4 @@ export class MainDisplayComponent {
   next() {
     this.pageNumber = this.pageNumber + 1;
   }
-
 }

@@ -1,10 +1,16 @@
 export interface WorkoutExercise {
     workoutExerciseId?: number;
     workout: {
-        workoutId: number
+        workoutId: number;
     };
     exercise: {
-        exerciseId: number
+        exerciseId?: number;
+        name: string;
+        primaryMuscle: {
+            muscleGroupId: number
+        };
+        cardio: boolean;
+        strength: boolean;
     };
     avgSpeed: number;
     calories: number;

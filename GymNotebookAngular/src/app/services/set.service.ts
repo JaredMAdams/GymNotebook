@@ -27,6 +27,13 @@ export class SetService {
     )
   }
 
+  getSetsByWorkoutExerciseId(workoutExerciseId: number): Observable<Set[]> {
+    return this.http.get<Set[]>(`${this.setUrl}/workout-exercise/` + workoutExerciseId, {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
   postSet(set: Set): Observable<Set> {
     return this.http.post<Set>(`${this.setUrl}`, JSON.stringify(set), {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
       retry(1),

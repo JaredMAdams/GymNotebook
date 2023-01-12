@@ -1,0 +1,31 @@
+#table {
+    border: black solid 1px;
+    box-shadow: 2px 2px 2px 2px rgba(28, 27, 27, 0.495); 
+}
+
+.mat-column-number {
+    border-right: 1px solid currentColor;
+    text-align: center;
+    justify-content: middle;
+}
+
+.mat-column-weight-goal {
+    border-right: 1px solid currentColor;
+    text-align: center;
+}
+
+.mat-column-rep-goal {
+    border-right: 1px solid currentColor;
+    text-align: center;
+}
+
+.mat-column-weight-actual {
+    border-right: 1px solid currentColor;
+    text-align: center;
+}
+
+.mat-column-rep-actual {
+    text-align: center;
+}
+
+

@@ -29,7 +29,7 @@ export class WorkoutExerciseService {
   }
 
   getWorkoutExercisesByWorkout(workoutId: number): Observable<WorkoutExercise[]> {
-    return this.http.get<WorkoutExercise[]>(`${this.workoutExerciseUrl}/` + workoutId, {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
+    return this.http.get<WorkoutExercise[]>(`${this.workoutExerciseUrl}/workout/` + workoutId, {headers: environment.headers, withCredentials: environment.withCredentials}).pipe(
       retry(1),
       catchError(this.errorHandl)
     )

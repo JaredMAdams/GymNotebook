@@ -4,4 +4,5 @@ export interface Workout {
     page: {
         pageId: number
     };
+    createDateTime?: string;
 }

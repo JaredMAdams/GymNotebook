@@ -1,0 +1,38 @@
+<div class="main">
+
+    <div id="table" *ngIf="setsLoaded == true">
+
+        <table mat-table [dataSource]="sets" actions="" >
+
+            <ng-container matColumnDef="number">
+                <th mat-header-cell *matHeaderCellDef="">Set</th>
+                <td mat-cell *matCellDef="let set">{{set.set}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="weight-goal">
+                <th mat-header-cell *matHeaderCellDef="">Weight Goal</th>
+                <td mat-cell *matCellDef="let set">{{set.weightGoal}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="rep-goal">
+                <th mat-header-cell *matHeaderCellDef="">Rep Goal</th>
+                <td mat-cell *matCellDef="let set">{{set.weightGoal}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="weight-actual">
+                <th mat-header-cell *matHeaderCellDef="">Weight Actual</th>
+                <td mat-cell *matCellDef="let set">{{set.weightActual}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="rep-actual">
+                <th mat-header-cell *matHeaderCellDef="">Rep Actual</th>
+                <td mat-cell *matCellDef="let set">{{set.repActual}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+        </table>
+
+    </div>
+
+</div>

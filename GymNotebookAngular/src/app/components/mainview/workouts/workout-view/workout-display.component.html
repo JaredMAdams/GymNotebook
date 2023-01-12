@@ -1,0 +1,16 @@
+<div class="main">
+
+    <div id="top_of_page" *ngIf="pageNumber != 0">
+
+    <span id="title">{{workout.title}}</span>
+    <span id="date">{{workout.createDateTime | date : 'EE, LLL d'}}</span>
+
+    </div>
+
+    <div id="content">
+
+        <app-exercise [workoutId]="this.workout.workoutId!"></app-exercise>
+
+    </div>
+
+</div>

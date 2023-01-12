@@ -17,7 +17,9 @@ import { HomeComponent } from './components/mainview/home/home/home.component';
 import { NavbarComponent } from './components/mainview/navbar/navbar.component';
 import { MainDisplayComponent } from './components/mainview/workouts/workout-overview/main-display.component';
 import { NewWorkoutComponent } from './components/mainview/workouts/new-workout/new-workout/new-workout.component';
-import { WorkoutDisplayComponent } from './components/mainview/workouts/workout-display/workout-display/workout-display.component';
+import { WorkoutDisplayComponent } from './components/mainview/workouts/workout-view/workout-display.component';
+import { ExerciseComponent } from './components/mainview/workouts/exercise/exercise.component';
+import { SetsComponent } from './components/mainview/workouts/sets/sets.component';
 
 
 
@@ -33,6 +35,8 @@ import { WorkoutDisplayComponent } from './components/mainview/workouts/workout-
     MainComponent,
     NewWorkoutComponent,
     WorkoutDisplayComponent,
+    ExerciseComponent,
+    SetsComponent,
   ],
   imports: [
     BrowserModule,

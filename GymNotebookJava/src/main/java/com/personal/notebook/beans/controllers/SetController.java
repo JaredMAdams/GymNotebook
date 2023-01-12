@@ -36,6 +36,11 @@ public class SetController {
         return ResponseEntity.ok(this.setService.readAll());
     }
 
+    @GetMapping(value = "/workout-exercise/{workoutExerciseId}")
+    public ResponseEntity<List<Set>> getSetsByWorkoutExerciseId(@PathVariable Integer workoutExerciseId) {
+        return ResponseEntity.ok(this.setService.readByWorkoutExerciseId(workoutExerciseId));
+    }
+
     @PostMapping
     public ResponseEntity<Set> createSet(@RequestBody Set set) {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.setService.createSet(set));

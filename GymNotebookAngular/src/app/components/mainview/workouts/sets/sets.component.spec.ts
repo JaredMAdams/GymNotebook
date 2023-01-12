@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CurrentWorkoutComponent } from './main-display.component';
 
-describe('CurrentWorkoutComponent', () => {
-  let component: CurrentWorkoutComponent;
-  let fixture: ComponentFixture<CurrentWorkoutComponent>;
+import { SetsComponent } from './sets.component';
+
+describe('SetsComponent', () => {
+  let component: SetsComponent;
+  let fixture: ComponentFixture<SetsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CurrentWorkoutComponent ]
+      declarations: [ SetsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CurrentWorkoutComponent);
+    fixture = TestBed.createComponent(SetsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

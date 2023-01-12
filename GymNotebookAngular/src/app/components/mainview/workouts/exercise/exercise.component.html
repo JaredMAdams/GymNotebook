@@ -1,0 +1,58 @@
+<div class="main">
+
+    <div id="top_of_page" *ngIf="exercise != 0">
+
+        <button mat-icon-button id="previous" *ngIf="this.exercise > 1" (click)="previous()">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+
+        <span id="exercise_name">{{workoutExercise.exercise.name}}</span>
+
+        <button mat-icon-button id="next" *ngIf="this.exercise < this.workoutExercises.length" (click)="next()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+
+    </div>
+
+    <app-sets [workoutExerciseId]="workoutExercise.workoutExerciseId!"></app-sets>
+
+    <div id="new_exercise">
+
+        <button mat-raised-button id="new_exercise_button">
+            <mat-icon>add</mat-icon>New Exercise
+        </button>
+        
+    </div>
+
+    
+
+
+    <p id="notes_header">Notes</p>
+
+    <div id="notes" *ngIf="workoutExercise.notes != ''">
+
+
+    </div>
+
+    <div id="no_notes" *ngIf="workoutExercise.notes == ''">
+
+        There are currently no notes for this exercise
+
+    </div>
+
+    <p id="goal">Goal</p>
+
+    <div id="previous_goal">
+
+
+        <p>Hey</p>
+        
+
+
+    </div>
+
+    <div style="height: 20px">
+
+    </div>
+
+</div>

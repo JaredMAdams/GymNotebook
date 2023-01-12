@@ -24,6 +24,10 @@ public class SetService {
         return this.setRepo.findAll();
     }
 
+    public List<Set> readByWorkoutExerciseId(Integer workoutExerciseId) {
+        return this.setRepo.findByWorkoutExercise_WorkoutExerciseId(workoutExerciseId);
+    }
+
     public Set createSet(Set set) {
         return this.setRepo.save(set);
     }
