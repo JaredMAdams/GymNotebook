@@ -11,7 +11,7 @@
 	<groupId>com.personal</groupId>
 	<artifactId>notebook</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>notebook</name>
 	<description>Personal notebook to log gym workouts and PR&apos;s</description>
 	<properties>
